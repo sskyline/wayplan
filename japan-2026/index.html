@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>解锁行程 · Wayplan</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:#253b30;font:16px/1.6 system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
+    main{min-height:100svh;display:grid;place-items:center;padding:24px}
+    article{position:relative;width:min(100%,420px);padding:clamp(24px,6vw,42px);background:#fffef9;border:1px solid #d3d9cd;border-radius:11px;box-shadow:0 12px 45px #3443330c}
+    header{border-bottom:1px solid #dce0d5;padding-bottom:14px;margin-bottom:25px}
+    .brand{font:600 24px/1.15 Georgia,serif;letter-spacing:-1px;color:#355343}
+    h1{font:650 30px/1.4 "Songti SC","Noto Serif CJK SC",serif;margin:0 0 4px}
+    p{margin:0;color:#5e6a5e;font-size:14px}form{margin-top:22px}label{font-size:14px;font-weight:650}
+    input,button{width:100%;border-radius:6px;font:inherit}input{margin:5px 0 14px;padding:10px 12px;border:1px solid #aebaaa;background:#fff}
+    input:focus-visible,button:focus-visible{outline:3px solid #a95839;outline-offset:2px}
+    button{border:0;background:#294d3b;color:#fffefa;padding:11px;font-weight:650;cursor:pointer}button:disabled{opacity:.65;cursor:progress}
+    #gate-status{margin-top:12px}#gate-status:empty{display:none}
+  </style>
+  <script defer src="./unlock.js"></script>
+</head>
+<body><main><article>
+  <header><span class="brand" lang="en">Wayplan</span></header>
+  <h1>解锁行程</h1><p>输入分享给你的口令，查看旅行手帐。</p>
+  <form id="gate-form">
+    <label for="gate-pass">访问口令</label>
+    <input id="gate-pass" type="password" required autocomplete="current-password" autocapitalize="none" spellcheck="false">
+    <button id="gate-submit" type="submit">查看行程</button>
+    <p id="gate-status" role="status" aria-live="polite"></p>
+  </form>
+  <noscript><p>请在浏览器中启用 JavaScript 以解锁行程。</p></noscript>
+</article></main></body>
+</html>
